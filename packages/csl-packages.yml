@@ -1,0 +1,7 @@
+generated: '2026-10-21'
+method: none
+note: 'No first-party SDK or client library found. CSL publishes no API or developer documentation.
+  github.com/csl is an unrelated personal User account; github.com/cslbehring is an Organization
+  with no profile/website linking it to CSL and a single 2017 repo (public_hdf_processors_ConvertAvroToCSV),
+  which is not an API client.'
+packages: []

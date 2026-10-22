@@ -1,23 +1,107 @@
 aid: csl
+
 name: CSL
-description: 'CSL is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.csl.com/media/shared/logos/csl/csl-logo-768x430.png?h=430&iar=0&w=768
+
+description: 'CSL (CSL Limited) is a global biotechnology company headquartered in Australia with
+  more than a century of history. It operates through CSL Behring (plasma-derived and recombinant
+  therapies for rare and serious diseases such as bleeding disorders, immunodeficiencies, hereditary
+  angioedema and Alpha 1 Antitrypsin Deficiency), CSL Plasma, CSL Seqirus (one of the world''s largest
+  influenza vaccine providers) and CSL Vifor (iron deficiency and nephrology). Surfaced via the API
+  Evangelist harvest backlog (australia-apidays-2026); its website publishes no public developer
+  portal or API documentation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/csl/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Healthcare
+- Pharmaceuticals
+- Vaccines
+- Plasma Therapies
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/csl-hosts.yml
+- type: Vendors
+  url: vendors/csl-vendors.yml
+- type: DomainSecurity
+  url: security/csl-domain-security.yml
 - type: Website
-  url: https://csl.com/
+  url: https://www.csl.com/
+- type: TermsOfService
+  url: https://www.csl.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://privacy.csl.com/
+- type: Support
+  url: https://www.csl.com/contact
+- type: Blog
+  url: https://newsroom.csl.com/
+- type: Investors
+  url: https://investors.csl.com/
+- type: Careers
+  url: https://www.csl.com/careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/csl/
+- type: Twitter
+  url: https://twitter.com/csl
+- type: YouTube
+  url: https://www.youtube.com/user/CSLGroup
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: 'Identity verified from www.csl.com (title "Global Biotechnology Company | CSL"); pointers
+    taken from links on its rendered homepage. No developer portal, API docs or GitHub org is linked.
+    No og:image could be read (plain curl hit a Vercel checkpoint 429), so image is left unset.'
+  evidence:
+  - url: https://www.csl.com/
+    status: 200
+  - url: https://www.csl.com/terms-of-use
+    status: 200
+  - url: https://privacy.csl.com/
+    status: 200
+  - url: https://www.csl.com/contact
+    status: 200
+  - url: https://newsroom.csl.com/
+    status: 200
+  - url: https://investors.csl.com/
+    status: 200
+  - url: https://www.csl.com/careers
+    status: 200
+  - url: https://www.linkedin.com/company/csl/
+    status: 200
+  - url: https://twitter.com/csl
+    status: 200
+  - url: https://www.youtube.com/user/CSLGroup
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

@@ -1,0 +1,128 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 10
+  own: 7
+  other_domain: 0
+  platform: 3
+  roles:
+  - api
+  - legal
+  - marketing
+  - other
+  - website
+hosts:
+- host: api.csl.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: csl.com
+  role: api
+  relation: own
+- host: corporateresponsibility.csl.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: csl.com
+  role: other
+  relation: own
+- host: csl.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: csl.com
+  role: other
+  relation: own
+- host: investors.csl.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Investors
+  serves: []
+  registrable_domain: csl.com
+  role: other
+  relation: own
+- host: newsroom.csl.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: csl.com
+  role: marketing
+  relation: own
+- host: privacy.csl.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: csl.com
+  role: legal
+  relation: own
+- host: twitter.com
+  found_by:
+  - pointer
+  types:
+  - Twitter
+  serves: []
+  registrable_domain: twitter.com
+  role: other
+  relation: platform
+- host: www.csl.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - TermsOfService
+  - Support
+  - Careers
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: csl.com
+  role: website
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.youtube.com
+  found_by:
+  - pointer
+  types:
+  - YouTube
+  serves: []
+  registrable_domain: youtube.com
+  role: other
+  relation: platform

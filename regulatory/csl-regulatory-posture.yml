@@ -1,0 +1,86 @@
+generated: '2026-10-21'
+method: searched
+probe: true
+source: https://privacy.csl.com/
+note: >-
+  privacy.csl.com serves a JavaScript shell to a plain GET (253 characters of text); the Global Privacy
+  Policy was read from the headless-browser rendering (HTTP 200). https://www.csl.com/privacy-policy
+  redirects there. Quotes below are copied from that rendering and from https://www.csl.com/accessibility-statement.
+  No subprocessor list, Global Privacy Control / opt-out preference signal language, AI transparency statement,
+  or WCAG conformance claim was found on these pages.
+signals:
+  data_subject_request:
+    url: https://privacy.csl.com/
+    section: What Rights Do You Have?
+    channel: CSL Data Subject Request portal ("Data Privacy Request" link); privacy@cslbehring.com
+    rights_named: [access, correction, erasure, objection, transfer (portability), not to be subjected to automated decision-making]
+    evidence:
+    - source: https://privacy.csl.com/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        You can exercise your rights by using the CSL Data Subject Request portal by following this link Data Privacy Request.
+    - source: https://privacy.csl.com/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Request that we transfer Personal Data that you have provided to us to you or another party. Request not to be subjected to automated decision-making.
+    note: >-
+      CSL names data subject rights (qualified as "You may have the right to") and runs a dedicated request
+      portal. It also says it may reject a request on lawful grounds and will give reasons. No response time is stated.
+  data_retention:
+    url: https://privacy.csl.com/
+    section: How Long Does CSL Retain Your Personal Data?
+    evidence:
+    - source: https://privacy.csl.com/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        We will only retain your Personal Data for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal or reporting requirements.
+    note: A purpose-limitation retention rule with no fixed periods; anonymised data may be kept without further notice.
+  incident_notification:
+    url: https://privacy.csl.com/
+    section: How We Will Keep Your Data Secure?
+    evidence:
+    - source: https://privacy.csl.com/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        We have put in place procedures to deal with suspected data security breaches and will notify you and any applicable regulators of breaches in accordance with relevant legal requirements.
+    note: A breach-notification commitment tied to legal requirements; it gives no notification deadline.
+  data_residency:
+    url: https://privacy.csl.com/
+    section: Do We Transfer Your Personal Data Cross Border?
+    evidence:
+    - source: https://privacy.csl.com/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        CSL may be required to transfer your Personal Data to other companies in the same group of companies as us or third parties, as mentioned above, which may be located in jurisdictions that do not offer equivalent levels of data protection.
+    note: >-
+      This is a cross-border transfer disclosure, not a residency guarantee. Personal data may leave the user's
+      jurisdiction. Inquiries go to privacy@cslbehring.com. No transfer mechanism (e.g. SCCs) is named in this section.
+  age_assurance:
+    url: https://privacy.csl.com/
+    section: Is Personal Data Collected From Children or Minors?
+    evidence:
+    - source: https://privacy.csl.com/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        Most of our services, including this website, are operated primarily for the use of HCPs, adult consumers and caregivers and are not designed or intended for children or minors.
+    note: >-
+      The services are said to be not intended for minors, and processing of children's data requires the express
+      consent of a parent or guardian. No age-verification mechanism is described.
+  accessibility_conformance:
+    url: https://www.csl.com/accessibility-statement
+    section: Accessibility Statement
+    evidence:
+    - source: https://www.csl.com/accessibility-statement
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        CSL is committed to providing an accessible website experience for all customers and consumers, regardless of disability.
+    note: >-
+      A general accessibility commitment with accommodation and technical-assistance contacts
+      (webmasterglobal@cslbehring.com). It names NO conformance standard or level: WCAG does not appear on the page.
